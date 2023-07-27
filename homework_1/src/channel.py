@@ -35,10 +35,6 @@ class Channel:
     def __init__(self, chanel_id: str) -> None:
         self.chanel_id = chanel_id
 
-        chanel_id = self.chanel_id
-        channel = youtube.channels().list(id=channel_id, part='snippet,statistics').execute()
-
-
     def print_info(self):
         channel = youtube.channels().list(id=channel_id, part='snippet,statistics').execute()
         printj(channel)

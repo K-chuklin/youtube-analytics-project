@@ -4,7 +4,7 @@ import os
 # необходимо установить через: pip install google-api-python-client
 from googleapiclient.discovery import build
 
-import isodate
+# import isodate
 
 # YT_API_KEY скопирован из гугла и вставлен в переменные окружения
 api_key: str = os.getenv('YT_API_KEY')
@@ -36,5 +36,5 @@ class Channel:
         self.chanel_id = chanel_id
 
     def print_info(self):
-        channel = youtube.channels().list(id=channel_id, part='snippet,statistics').execute()
-        printj(channel)
+        channels = youtube.channels().list(id=channel_id, part='snippet,statistics').execute()
+        printj(channels)

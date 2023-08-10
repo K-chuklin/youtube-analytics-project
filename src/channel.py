@@ -13,10 +13,9 @@ youtube = build('youtube', 'v3', developerKey=api_key)
 
 class Channel:
 
-    def __init__(self, channel_id: str, ) -> None:
+    def __init__(self, channel_id: str) -> None:
         self.__channel_id = channel_id
 
-        channel_id = self.__channel_id
         channel = youtube.channels().list(id=self.__channel_id, part='snippet,statistics').execute()
         self.title = channel['items'][0]['snippet']['title']
         self.description = channel['items'][0]['snippet']['description']

@@ -1,4 +1,4 @@
-from homework_2.src.channel import Channel
+from src.channel import Channel
 
 if __name__ == '__main__':
     moscowpython = Channel('UC-OVMPlMA3-YCIeg4z5z23A')
@@ -18,4 +18,3 @@ if __name__ == '__main__':
 
     # создаем файл 'moscowpython.json' в данными по каналу
     moscowpython.to_json('moscowpython.json')
-

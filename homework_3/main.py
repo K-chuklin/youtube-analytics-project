@@ -1,4 +1,4 @@
-from homework_3.src.channel import Channel
+from src.channel import Channel
 
 if __name__ == '__main__':
     # Создаем два экземпляра класса
